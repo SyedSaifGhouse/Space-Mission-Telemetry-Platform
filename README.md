@@ -387,7 +387,7 @@ POST /maintenance
 
 <img width="1920" height="1020" alt="op 6" src="https://github.com/user-attachments/assets/67ea5fd3-9b5b-4078-97e9-8fda23ea5c65" />
 
-### get Maintenance Records
+### GET Maintenance Records
 
 <img width="1920" height="1020" alt="op 7" src="https://github.com/user-attachments/assets/3afdc289-af09-4c0a-a15a-b788d92c748e" />
 
@@ -439,7 +439,9 @@ POST /maintenance
 # 👨‍💻 Author
 
 **SYED SAIF SYED GHOUSE**
+
 **B.TECH (AI & DS)**
+
 **SAVEETHA ENGINEERING COLLEGE**
 
 Spring Boot Microservices Project
