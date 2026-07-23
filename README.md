@@ -1,160 +1,373 @@
-# Space Mission Telemetry Platform
-## Overview
+# 🚀 Space Mission Telemetry Platform
 
-The Space Mission Telemetry Platform is a Microservices-based Spring Boot application designed to simulate the monitoring and management of space mission operations. The platform is divided into independent services, where each microservice performs a specific responsibility and communicates through an API Gateway.
+A Microservices-based Space Mission Telemetry Platform developed using **Spring Boot**, **Spring Cloud Gateway**, **Spring Data JPA**, **MySQL**, and **REST APIs**.
 
-This project demonstrates the implementation of Microservices Architecture using Spring Boot.
+The platform simulates the monitoring of satellites by collecting telemetry data, generating mission alerts, scheduling maintenance activities, and exposing all services through a centralized API Gateway.
 
-## Technologies Used
+---
 
-* Java 17
-* Spring Boot
-* Maven
-* REST API
-* Spring Boot Actuator
-* IntelliJ IDEA
-* Git
-* GitHub
+# 📌 Project Overview
 
-## Project Structure
+This project demonstrates a complete Microservices Architecture where each business functionality is implemented as an independent Spring Boot application with its own database.
+
+The system includes:
+
+- Satellite Management Service
+- Telemetry Management Service
+- Alert Management Service
+- Maintenance Management Service
+- API Gateway
+
+Each microservice owns its own database and communicates using REST APIs.
+
+---
+
+# 🏗️ System Architecture
+
 ```
-Space-Mission-Telemetry-Platform
-│
-├── api-gateway
-├── maintenance-service
-├── mission-alert-service
-├── orbital-registry-service
-└── sensor-monitor-device
+                   Client / Postman
+                          │
+                          ▼
+                 API Gateway (8080)
+                          │
+     ┌────────────┬────────────┬────────────┬────────────┐
+     ▼            ▼            ▼            ▼
+Satellite      Telemetry     Alert     Maintenance
+Service         Service      Service      Service
+(8081)          (8082)       (8083)       (8084)
+     │            │            │            │
+     ▼            ▼            ▼            ▼
+satellite_db telemetry_db alert_db maintenance_db
 ```
 
-## Microservices
-### 1. API Gateway
+---
+
+# ⚙️ Technologies Used
+
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- Spring Cloud Gateway
+- REST APIs
+- Maven
+- MySQL
+- MySQL Workbench
+- Hibernate
+- Bean Validation
+- Lombok
+- IntelliJ IDEA
+- Postman
+- Git
+- GitHub
+
+---
+
+# 📂 Microservices
+
+## 1️⃣ Satellite Service
+
+**Port:** `8081`
+
+### Responsibilities
+
+- Register satellites
+- Update satellite information
+- Retrieve satellite details
+- Delete satellites
+
+### Database
+
+```
+satellite_db
+```
+
+---
+
+## 2️⃣ Telemetry Service
+
+**Port:** `8082`
+
+### Responsibilities
+
+- Store telemetry data
+- Validate satellite existence
+- Generate mission alerts automatically
+
+### Database
+
+```
+telemetry_db
+```
+
+---
+
+## 3️⃣ Alert Service
+
+**Port:** `8083`
+
+### Responsibilities
+
+- Store mission alerts
+- Retrieve alert history
+- Update alerts
+- Delete alerts
+
+### Database
+
+```
+alert_db
+```
+
+---
+
+## 4️⃣ Maintenance Service
+
+**Port:** `8084`
+
+### Responsibilities
+
+- Schedule maintenance
+- Validate satellite existence
+- Update maintenance status
+- Delete maintenance records
+
+### Database
+
+```
+maintenance_db
+```
+
+---
+
+## 5️⃣ API Gateway
+
+**Port:** `8080`
 
 Acts as the single entry point for all client requests.
 
-Project Name:
+Routes requests to the appropriate microservice.
+
+---
+
+# 🗄️ Database Design
+
+Each microservice has its own independent database.
+
+| Service | Database |
+|----------|-----------|
+| Satellite | satellite_db |
+| Telemetry | telemetry_db |
+| Alert | alert_db |
+| Maintenance | maintenance_db |
+
+---
+
+# 🔗 API Endpoints
+
+## Satellite Service
+
+| Method | Endpoint |
+|---------|-----------|
+| POST | /satellites |
+| GET | /satellites |
+| GET | /satellites/{id} |
+| PUT | /satellites/{id} |
+| DELETE | /satellites/{id} |
+
+---
+
+## Telemetry Service
+
+| Method | Endpoint |
+|---------|-----------|
+| POST | /telemetry |
+| GET | /telemetry |
+| GET | /telemetry/{id} |
+| PUT | /telemetry/{id} |
+| DELETE | /telemetry/{id} |
+
+---
+
+## Alert Service
+
+| Method | Endpoint |
+|---------|-----------|
+| POST | /alerts |
+| GET | /alerts |
+| GET | /alerts/{id} |
+| PUT | /alerts/{id} |
+| DELETE | /alerts/{id} |
+
+---
+
+## Maintenance Service
+
+| Method | Endpoint |
+|---------|-----------|
+| POST | /maintenance |
+| GET | /maintenance |
+| GET | /maintenance/{id} |
+| PUT | /maintenance/{id} |
+| DELETE | /maintenance/{id} |
+
+---
+
+# 🔄 Microservice Communication
+
+The project uses **RestTemplate** for synchronous communication.
+
+### Telemetry Service
+
+Checks whether a satellite exists before storing telemetry.
+
 ```
-api-gateway
-```
-
-Responsibilities
-
-* Routes incoming requests
-* Centralized API access
-* Future integration with Spring Cloud Gateway
-
-### 2. Maintenance Service
-
-Project Name:
-```
-maintenance-service
-```
-
-Port
-```
-8080
-```
-
-Responsibilities
-
-* Handles maintenance-related operations
-* Provides REST APIs for maintenance management
-
-### 3. Orbital Registry Service
-
-Project Name:
-```
-orbital-registry-service
-```
-
-Port
-```
-8081
-```
-
-Responsibilities
-
-* Maintains orbital registry information
-* Handles spacecraft registration data
-
-### 4. Sensor Monitor Device
-
-Project Name
-```
-sensor-monitor-device
-```
-
-Port
-```
-8082
-```
-
-Responsibilities
-
-* Simulates spacecraft sensor monitoring
-* Provides telemetry sensor data
-  
-## 5. Mission Alert Service
-
-Project Name
-```
-mission-alert-service
-```
-
-Port
-```
-8083
-```
-
-Responsibilities
-
-* Generates mission alerts
-* Handles alert notifications
-
-## Port Configuration
-
-<img width="311" height="230" alt="image" src="https://github.com/user-attachments/assets/1e0ad946-a55b-49a1-ad5e-e471982bb266" />
-
-## Architecture Diagram
-```
-                    +----------------------+
-                    |       Client         |
-                    +----------+-----------+
-                               |
-                               |
-                     +---------v---------+
-                     |    API Gateway    |
-                     +---------+---------+
-                               |
-       -----------------------------------------------------
-       |                  |                 |               |
-       |                  |                 |               |
-+------v------+   +-------v-------+ +-------v-------+ +-----v------+
-| Maintenance |   |   Orbital     | | Sensor Monitor| |  Mission   |
-|  Service    |   | Registry      | |    Device     | | Alert       |
-|  Port 8080  |   | Port 8081     | | Port 8082     | | Port 8083   |
-+-------------+   +---------------+ +---------------+ +-------------+
+Telemetry Service
+        │
+        ▼
+Satellite Service
 ```
 
-## Screenshots
+Telemetry also automatically generates alerts when thresholds are exceeded.
 
-All microservices were accessed and tested through the API Gateway running on Port 8084. The API Gateway acts as the single entry point for client requests and routes them to the appropriate microservice based on the configured routes. The following screenshots demonstrate successful GET and POST requests for each microservice through the API Gateway.
+```
+Telemetry Service
+        │
+        ▼
+ Alert Service
+```
 
+---
 
-## Future Enhancements
-* Spring Cloud Gateway
-* Service Discovery
-* Config Server
-* Load Balancing
-* Circuit Breaker
-* JWT Authentication
-* Docker
-* Kubernetes
-* Monitoring Dashboard
-* Database Integration
+### Maintenance Service
 
-## Author
-### SYED SAIF SYED GHOUSE
+Validates satellite existence before scheduling maintenance.
 
-## GitHub
+```
+Maintenance Service
+          │
+          ▼
+   Satellite Service
+```
+
+---
+
+# ✅ Features
+
+- Microservices Architecture
+- CRUD Operations
+- REST APIs
+- Spring Data JPA
+- Bean Validation
+- Global Exception Handling
+- MySQL Integration
+- API Gateway Routing
+- Service-to-Service Communication
+- Automatic Alert Generation
+- Independent Databases
+- Maven Build
+- Clean Layered Architecture
+
+---
+
+# 📁 Project Structure
+
+```
+Space-Mission-Telemetry-Platform
+
+│
+├── satellite-service
+│
+├── telemetry-service
+│
+├── alert-service
+│
+├── maintenance-service
+│
+├── api-gateway
+│
+├── SQL Scripts
+│
+├── Postman Collection
+│
+└── README.md
+```
+
+---
+
+# ▶️ Running the Project
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/Space-Mission-Telemetry-Platform.git
+```
+
+---
+
+## Create Databases
+
+```
+satellite_db
+telemetry_db
+alert_db
+maintenance_db
+```
+
+---
+
+## Start Services
+
+Run services in the following order:
+
+1. Satellite Service
+2. Telemetry Service
+3. Alert Service
+4. Maintenance Service
+5. API Gateway
+
+---
+
+# 🧪 Testing
+
+Use Postman through the API Gateway.
+
+```
+http://localhost:8080
+```
+
+Example:
+
+```
+GET /satellites
+POST /telemetry
+GET /alerts
+POST /maintenance
+```
+
+---
+
+# 📌 Future Enhancements
+
+- Service Discovery (Eureka)
+- Config Server
+- JWT Authentication
+- Docker
+- Kubernetes Deployment
+- RabbitMQ/Kafka Messaging
+- Monitoring using Prometheus & Grafana
+- Circuit Breaker using Resilience4j
+
+---
+
+# 👨‍💻 Author
+
+**SYED SAIF SYED GHOUSE**
+**B.TECH (AI & DS)**
+**SAVEETHA ENGINEERING COLLEGE**
+
+Spring Boot Microservices Project
+
+---
+
+# 📄 GitHub
 https://github.com/SyedSaifGhouse
