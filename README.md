@@ -343,7 +343,84 @@ POST /telemetry
 GET /alerts
 POST /maintenance
 ```
+# 📸 Project Outputs
 
+## 🛰️ 1. Satellite Service
+
+### POST Satellite
+
+<img width="1920" height="1020" alt="op 1" src="https://github.com/user-attachments/assets/76e06f8f-4c7a-4cf0-b483-0b500d73af48" />
+
+### GET All Satellites
+
+<img width="1920" height="1020" alt="op 2" src="https://github.com/user-attachments/assets/16569d71-133a-4b29-8231-8ee6f3094275" />
+
+---
+
+## 📡 2. Telemetry Service
+
+### POST Telemetry
+
+<img width="1920" height="1020" alt="op 3" src="https://github.com/user-attachments/assets/a3945008-b206-4467-b03f-4fde36e5390d" />
+
+### GET All Telemetry
+
+<img width="1920" height="1020" alt="op 4" src="https://github.com/user-attachments/assets/07cb49f8-2116-4cc9-8508-6f4a5c126d9d" />
+
+---
+
+## 🚨 3. Alert Service
+
+### POST Alerts
+
+<img width="1920" height="1020" alt="op 5 1" src="https://github.com/user-attachments/assets/028837b6-db17-4f3a-850e-e5776d79b5c7" />
+
+### GET All Alerts
+
+<img width="1920" height="1020" alt="op 5 2" src="https://github.com/user-attachments/assets/726eb676-ec96-4a32-b557-615b4d430a18" />
+
+---
+
+## 🔧 4. Maintenance Service
+
+### POST Maintenance
+
+<img width="1920" height="1020" alt="op 6" src="https://github.com/user-attachments/assets/67ea5fd3-9b5b-4078-97e9-8fda23ea5c65" />
+
+### get Maintenance Records
+
+<img width="1920" height="1020" alt="op 7" src="https://github.com/user-attachments/assets/3afdc289-af09-4c0a-a15a-b788d92c748e" />
+
+---
+
+## 💾 5. MySQL Database
+
+### Satellite Database
+
+
+### Telemetry Database
+
+![Telemetry DB](screenshots/database/telemetry-db.png)
+
+### Alert Database
+
+![Alert DB](screenshots/database/alert-db.png)
+
+### Maintenance Database
+
+![Maintenance DB](screenshots/database/maintenance-db.png)
+
+---
+
+## 📑 7. Project Structure
+
+![Project Structure](screenshots/project-structure.png)
+
+---
+
+## 🏛️ 8. Microservices Architecture
+
+![Architecture](screenshots/architecture.png)
 ---
 
 # 📌 Future Enhancements
