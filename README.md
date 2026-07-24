@@ -348,7 +348,7 @@ Space-Mission-Telemetry-Platform
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Space-Mission-Telemetry-Platform.git
+git clone https://github.com/SyedSaifGhouse/Space-Mission-Telemetry-Platform.git
 ```
 
 ---
@@ -447,18 +447,19 @@ POST /maintenance
 
 ### Satellite Database
 
+<img width="1920" height="1020" alt="satellite" src="https://github.com/user-attachments/assets/5bb38150-7d30-424e-a65a-f149cb65091b" />
 
 ### Telemetry Database
 
-![Telemetry DB](screenshots/database/telemetry-db.png)
+<img width="1920" height="1020" alt="Screenshot 2026-07-24 115727" src="https://github.com/user-attachments/assets/72b54064-1f42-4ac6-ae98-18e42b1e2e25" />
 
 ### Alert Database
 
-![Alert DB](screenshots/database/alert-db.png)
+<img width="1920" height="1020" alt="Screenshot 2026-07-24 115757" src="https://github.com/user-attachments/assets/5b834f40-d38d-46c2-8ddd-be7ba5163191" />
 
 ### Maintenance Database
 
-![Maintenance DB](screenshots/database/maintenance-db.png)
+<img width="1920" height="1020" alt="Screenshot 2026-07-24 115817" src="https://github.com/user-attachments/assets/40327405-3179-4e65-bfe7-991992590d4f" />
 
 ---
 
