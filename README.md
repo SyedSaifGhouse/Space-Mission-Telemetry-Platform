@@ -53,7 +53,8 @@ The system includes:
 Each microservice owns its own database and communicates using REST APIs.
 
 ---
-# ✨ Key Features
+
+<h1 id="key-features">✨ Key Features</h1>
 
 The **Space Mission Telemetry Platform** incorporates modern backend development practices and microservices architecture to efficiently manage satellite operations. The key features of the project include:
 
@@ -70,7 +71,7 @@ The **Space Mission Telemetry Platform** incorporates modern backend development
 
 ---
 
-# 🏗️ System Architecture
+<h1 id="system-architecture">🏗️ System Architecture</h1>
 
 ```
                    Client / Postman
@@ -90,7 +91,7 @@ satellite_db telemetry_db alert_db maintenance_db
 
 ---
 
-# ⚙️ Technologies Used
+<h1 id="technologies-used">⚙️ Technologies Used</h1>
 
 - Java 17
 - Spring Boot
@@ -110,7 +111,7 @@ satellite_db telemetry_db alert_db maintenance_db
 
 ---
 
-# 📂 Microservices
+<h1 id="microservices">📂 Microservices</h1>
 
 ## 1️⃣ Satellite Service
 
@@ -197,7 +198,7 @@ Routes requests to the appropriate microservice.
 
 ---
 
-# 🗄️ Database Design
+<h1 id="database-design">🗄️ Database Design</h1>
 
 Each microservice has its own independent database.
 
@@ -210,7 +211,7 @@ Each microservice has its own independent database.
 
 ---
 
-# 🔗 API Endpoints
+<h1 id="api-endpoints">🔗 API Endpoints</h1>
 
 ## Satellite Service
 
@@ -260,7 +261,7 @@ Each microservice has its own independent database.
 
 ---
 
-# 🔄 Microservice Communication
+<h1 id="microservice-communication">🔄 Microservice Communication</h1>
 
 The project uses **RestTemplate** for synchronous communication.
 
@@ -299,7 +300,7 @@ Maintenance Service
 
 ---
 
-# ✅ Features
+<h1 id="author">✅ Features</h1>
 
 - Microservices Architecture
 - CRUD Operations
@@ -317,7 +318,7 @@ Maintenance Service
 
 ---
 
-# 📁 Project Structure
+<h1 id="project-structure">📁 Project Structure</h1>
 
 ```
 Space-Mission-Telemetry-Platform
@@ -342,7 +343,7 @@ Space-Mission-Telemetry-Platform
 
 ---
 
-# ▶️ Running the Project
+<h1 id="running-the-project">▶️ Running the Project</h1>
 
 ## Clone Repository
 
@@ -375,7 +376,7 @@ Run services in the following order:
 
 ---
 
-# 🧪 Testing
+<h1 id="testing">🧪 Testing</h1>
 
 Use Postman through the API Gateway.
 
@@ -391,7 +392,8 @@ POST /telemetry
 GET /alerts
 POST /maintenance
 ```
-# 📸 Project Outputs
+
+<h1 id="project-outputs">📸 Project Outputs</h1>
 
 ## 🛰️ 1. Satellite Service
 
@@ -471,7 +473,7 @@ POST /maintenance
 ![Architecture](screenshots/architecture.png)
 ---
 
-# 📌 Future Enhancements
+<h1 id="future-enhancements">📌 Future Enhancements</h1>
 
 - Service Discovery (Eureka)
 - Config Server
@@ -484,7 +486,7 @@ POST /maintenance
 
 ---
 
-# 👨‍💻 Author
+<h1 id="author">👨‍💻 Author</h1>
 
 **SYED SAIF SYED GHOUSE**
 
@@ -496,5 +498,10 @@ Spring Boot Microservices Project
 
 ---
 
-# 📄 GitHub
+<h1 id="github">📄 GitHub</h1>
+
+**Developer Profile:**  
 https://github.com/SyedSaifGhouse
+
+**Project Repository:**  
+https://github.com/SyedSaifGhouse/Space-Mission-Telemetry-Platform
