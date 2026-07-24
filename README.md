@@ -1,16 +1,48 @@
 # 🚀 Space Mission Telemetry Platform
 
+<p align="center">
+
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql)
+![REST API](https://img.shields.io/badge/REST-API-blue?style=for-the-badge)
+![Microservices](https://img.shields.io/badge/Microservices-Architecture-red?style=for-the-badge)
+![API Gateway](https://img.shields.io/badge/API-Gateway-purple?style=for-the-badge)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven)
+
+</p>
+
 A Microservices-based Space Mission Telemetry Platform developed using **Spring Boot**, **Spring Cloud Gateway**, **Spring Data JPA**, **MySQL**, and **REST APIs**.
 
 The platform simulates the monitoring of satellites by collecting telemetry data, generating mission alerts, scheduling maintenance activities, and exposing all services through a centralized API Gateway.
 
 ---
 
-# 📌 Project Overview
+# 📑 Table of Contents
+
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Technologies Used](#technologies-used)
+- [Microservices](#microservices)
+- [Database Design](#database-design)
+- [API Endpoints](#api-endpoints)
+- [Microservice Communication](#microservice-communication)
+- [Project Structure](#project-structure)
+- [Running the Project](#running-the-project)
+- [Testing](#testing)
+- [Project Outputs](#project-outputs)
+- [Future Enhancements](#future-enhancements)
+- [Author](#author)
+- [GitHub](#github)
+  
+---
+<h1 id="project-overview">📌 Project Overview</h1>
 
 This project demonstrates a complete Microservices Architecture where each business functionality is implemented as an independent Spring Boot application with its own database.
 
 The system includes:
+
 
 - Satellite Management Service
 - Telemetry Management Service
@@ -19,6 +51,22 @@ The system includes:
 - API Gateway
 
 Each microservice owns its own database and communicates using REST APIs.
+
+---
+# ✨ Key Features
+
+The **Space Mission Telemetry Platform** incorporates modern backend development practices and microservices architecture to efficiently manage satellite operations. The key features of the project include:
+
+- 🛰️ Microservices-based architecture using Spring Boot.
+- 🌐 Centralized request routing with Spring Cloud API Gateway.
+- 📡 Satellite, Telemetry, Alert, and Maintenance management services.
+- 🔗 RESTful APIs with inter-service communication using RestTemplate.
+- 🛢️ Independent MySQL database for each microservice.
+- 🔄 Complete CRUD operations using Spring Data JPA.
+- ✅ Bean Validation and Global Exception Handling.
+- 📬 REST API testing using Postman.
+- 🏛️ Layered architecture for better maintainability and scalability.
+- 🚀 Modular, scalable, and easy-to-extend backend design.
 
 ---
 
